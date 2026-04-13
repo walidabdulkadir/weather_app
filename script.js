@@ -1,7 +1,7 @@
 const cityInput = document.getElementById("cityInput");
 const searchBtn = document.getElementById("searchBtn");
 const card = document.getElementById("card");
-const apiUrl = "c588a0f31ba23bb28b9dbd2bea5d73bc";
+const apiKey = "c588a0f31ba23bb28b9dbd2bea5d73bc";
 
 searchBtn.addEventListener("click", async (e) => {
   e.preventDefault();
@@ -13,16 +13,22 @@ searchBtn.addEventListener("click", async (e) => {
       let weatherData = await getWeatherData(city);
       displayWeatherInfo(weatherData);
     } catch (error) {
-      displayError(error);
+      displayError("Unknown Country");
     }
   } else {
-    displayError("Please, Enter a City");
+    displayError("Please, enter a country");
   }
 });
 
 async function getWeatherData(city) {
+  const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&lat={lat}&lon={lon}&appid=${apiKey}`;
   const response = await fetch(apiUrl);
-  const data = await response.json();
+
+  if (!response.ok) {
+    throw new error();
+  }
+  console.log(response);
+  return await response.json();
 }
 
 function displayWeatherInfo(data) {}
