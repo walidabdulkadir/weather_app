@@ -95,38 +95,46 @@ body {
   display: none;
 }
 
-.city {
-  font-size: 1.8rem;
+.cityDis {
+  font-size: 1.6rem;
   font-weight: 700;
+  margin-bottom: 6px;
 }
 
-.temp {
-  font-size: 3.5rem;
+.tempDis {
+  font-size: 3.8rem;
+  font-weight: 800;
   margin: 10px 0;
+  color: var(--accent);
 }
 
-.description {
+.descriptionDis {
   color: var(--text-soft);
-  margin-bottom: 10px;
+  font-size: 1rem;
+  margin-bottom: 12px;
   text-transform: capitalize;
 }
 
-.humidity {
-  font-size: 0.9rem;
+.humidityDis {
+  font-size: 0.95rem;
   color: var(--text-soft);
+  background: rgba(0, 0, 0, 0.05);
+  padding: 6px 12px;
+  border-radius: 12px;
+  display: inline-block;
 }
 
-.emoji {
-  font-size: 2rem;
-  margin-top: 10px;
+.emojiDis {
+  font-size: 3rem;
+  margin-top: 12px;
 }
 
 /* ERROR MESSAGE */
-
 .errorDisplay {
-  color: rgb(205, 35, 35);
-  margin-top: 10px;
-  font-size: 2rem;
+  color: #d32f2f;
+  margin-top: 15px;
+  font-size: 1.1rem;
+  text-align: center;
 }
 
 /* RESPONSIVE */
