@@ -1,10 +1,9 @@
 const cityInput = document.getElementById("cityInput");
 const searchBtn = document.getElementById("searchBtn");
 const card = document.getElementById("card");
-const apiKey = "c588a0f31ba23bb28b9dbd2bea5d73bc";
 
 async function getWeatherData(city) {
-  const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+  const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${api_Key}&units=metric`;
   const response = await fetch(apiUrl);
 
   if (!response.ok) {
